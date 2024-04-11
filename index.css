@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*---------------------------------------------------nav css start here---------------------------------------------------------- */
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10001;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #333;
+
+
+}
+
+.brand {
+    font-size: 2em;
+    color: white;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+ul li a.active {
+    text-decoration: underline;
+    color: white;
+}
+
+li:hover {
+    background: #555;
+}
+
+.toggle_button {
+    display: none;
+}
+
+.toggle_button .bar {
+    display: block;
+    height: 3px;
+    width: 30px;
+    margin: 4px 0;
+    background-color: white;
+}
+
+#searchBar {
+    height: 30px;
+    width: 150px;
+    padding: 0.2rem;
+
+}
+
+.btn {
+    padding: 0.2rem;
+
+}
+
+
+/*---------------------------------------------------nav css ends here---------------------------------------------------------- */
+
+/* -------------------------------------------------home css start from here---------------------------------------------------- */
+.homeContainer {
+    background-image: url('https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-sunlit-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load');
+    background-repeat: no-repeat;
+    background-position: ccenter;
+    background-size: cover;
+    opacity: 0.75;
+    height: 80vh;
+    margin: auto 2rem;
+}
+
+.homeContainer p {
+    text-align: center;
+    font-weight: bold;
+    width: 50%;
+    margin: auto;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+
+/* -------------------------------------------------home css ends from here---------------------------------------------------- */
+
+/* ----------------------------------------------about css start from here ------------------------------------------------------ */
+
+.aboutContainer {
+    text-align: center;
+    height: 90vh;
+    margin: 5rem 1rem;
+}
+
+.aboutContainer h1 {
+    font-size: 3em;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid black;
+
+}
+
+.cardImg {
+    width: 60%;
+
+}
+
+.card1,
+.card2,
+.card3 {
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 1.5rem;
+
+}
+
+.text {
+    line-height: 25px;
+}
+
+.card2 {
+    margin: -4% 40%;
+}
+
+.cardContainer {
+    margin: auto;
+    width: 50%;
+}
+
+/* -----------------------------------------------about css ends from here ------------------------------------------------------ */
+
+/* ---------------------------------------------- service css starts from here-------------------------------------------------- */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.services {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 35%;
+
+}
+
+.services h2 {
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.service {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.33% - 40px);
+    margin: 0 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.service h3 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.service p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* ---------------------------------------------- service css ends from here-------------------------------------------------- */
+
+.footer {
+    margin: 3rem auto auto auto;
+    background: #333;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+
+}
+
+.info {
+    color: white;
+
+}
+
+/* --------------------------------------media query start here -------------------------------------- */
+
+@media(max-width: 768px) {
+    .toggle_button {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        cursor: pointer;
+    }
+
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        background: #333;
+    }
+
+    .navbar-links.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-links ul {
+
+        flex-direction: column;
+    }
+
+    .card1,
+    .card2,
+    .card3 {
+        width: 100%;
+
+    }
+
+    .card2 {
+        margin: 2rem 0;
+
+    }
+
+    .cardContainer {
+        width: 100%;
+    }
+
+    .services {
+        margin-top: 35rem;
+    }
+
+    .service {
+        width: 100%;
+        margin: 1rem 0;
+
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sideContainer,
+    .btn1 {
+        margin-top: 1rem;
+    }
+
+    .btn1 {
+        width: 40%;
+    }
+
+    #colorList {
+        padding-top: 40%;
+        flex-direction: column;
+    }
+}
+/* --------------------------------------media query ends here -------------------------------------- */
+.searchContainer {
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.searchContainer input {
+    height: 50px;
+    width: 250px;
+    padding: 1rem;
+    border: none;
+    border-bottom: 2px solid black;
+
+}
+
+.searchContainer button {
+    margin-top: 2rem;
+    width: 100%;
+
+}
+/* ------------------------------------color container css start from here------------------------------ */
+.colorContainer {
+    padding: 20%;
+}
+
+#colorList {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+/* ------------------------------------color container css ends from here ---------------------------------- */
